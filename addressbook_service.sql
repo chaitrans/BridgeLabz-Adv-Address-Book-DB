@@ -64,3 +64,8 @@ Update AddressBook set AddressBookType = 'Friends' where FirstName  = 'Mayuri' o
 Update AddressBook set AddressBookType = 'Profession' where FirstName  = 'Minal' or FirstName  = 'Soniya';  
  
 select * from addressbook; 
+
+#UC 10 Ability to get count by type
+Select Count(FirstName) From AddressBook where AddressBookType = 'Family' order by FirstName;		#Count 2
+Select Count(FirstName) From AddressBook where AddressBookType = 'Friends' order by FirstName;		#Count 2
+Select Count(FirstName) From AddressBook where AddressBookType = 'Profession' order by FirstName;	#Count 2
