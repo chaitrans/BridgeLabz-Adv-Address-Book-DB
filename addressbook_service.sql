@@ -37,3 +37,7 @@ select * from addressbook;
 #UC5 Ability to delete contact using person's name
 delete from addressbook where FirstName='Mayuri';
 select * from addressbook;
+
+#UC6 ability to retrive person belonging to city or state from addressbook
+select * from addressbook where City = 'Bhandara';
+ select * from addressbook where State = 'Maharashtra';
