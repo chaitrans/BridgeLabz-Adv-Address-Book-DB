@@ -51,3 +51,16 @@ select * from addressbook where City = 'Bhandara';
  
  #UC8 showing addressbook sorted alphabeticaly by name
  select * from addressbook where city = 'Bhandara' order by FirstName;
+ 
+ #UC9 identify each addressbook with its name and type
+Alter table AddressBook add AddressBookName varchar(45) Not Null after Email_Id;
+Alter table AddressBook add AddressBookType varchar(45) Not Null after AddressBookName; 
+ 
+Update AddressBook set AddressBookName= 'AddressBook1' where FirstName  = 'Minal' or FirstName  = 'Pranali';
+Update AddressBook set AddressBookName ='AddressBook2' where FirstName  = 'Soniya' or FirstName  = 'Mayuri';
+Update AddressBook set AddressBookName = 'AddressBook3' where FirstName  = 'Nikita' or FirstName  = 'Shital';
+Update AddressBook set AddressBookType = 'Family' where FirstName  = 'Nikita'  or FirstName  = 'Pranali';
+Update AddressBook set AddressBookType = 'Friends' where FirstName  = 'Mayuri' or FirstName  = 'Shital' ;
+Update AddressBook set AddressBookType = 'Profession' where FirstName  = 'Minal' or FirstName  = 'Soniya';  
+ 
+select * from addressbook; 
